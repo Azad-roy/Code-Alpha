@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallary</title>
+  <link rel="stylesheet" href="image_gallery.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">My Gallery</div>
+    <ul class="navbar-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="gallery-container">
+    <div class="gallery">
+      <img id="current-image" src="images/1st.jpg" alt="Image 1">
+    </div>
+    <div class="controls">
+      <button id="prevBtn"><i class="fas fa-arrow-left"></i> Prev</button>
+      <button id="nextBtn">Next <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="thumbnails">
+      <img src="images/1st.jpg" class="thumbnail" onclick="setImage(0)" alt="Image 1">
+      <img src="images/2nd.jpg" class="thumbnail" onclick="setImage(1)" alt="Image 2">
+      <img src="images/3rd.jpg" class="thumbnail" onclick="setImage(2)" alt="Image 3">
+      <img src="images/4th.jpg" class="thumbnail" onclick="setImage(3)" alt="Image 4">
+    </div>
+  </div>
+
+  <script src="image_gallery.js"></script>
+</body>
+</html>
