@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 25%;
+            background-color: wheat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: rgb(170, 170, 170) 20px 20px 20px 20px;
+        }
+        
+        .result{
+            display: flex;
+        }
+        input{
+            padding: 20px;
+            margin: 10px;
+            border: 2.5px solid grey;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+
+        button{
+            font-size: 40px;
+            width: 100px;
+            height: 100px;
+            margin: 2px 5px;
+            border: 2.5px solid rgb(139, 137, 137);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: white;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="result">
+            <input type="text" id="display" readonly>
+        </div>
+
+        <div class="line1">
+            <button onclick="currentDisplay='';
+            document.querySelector('#display').value=currentDisplay;">C</button>
+
+            <button onclick="currentDisplay=currentDisplay+1;
+            document.querySelector('#display').value=currentDisplay;">1</button>
+
+            <button onclick="currentDisplay+=2;
+            document.querySelector('#display').value=currentDisplay;">2</button>
+        </div>
+
+        <div class="line2">
+            <button onclick="currentDisplay+='+';
+            document.querySelector('#display').value=currentDisplay;">+</button>
+
+            <button onclick="currentDisplay+=3;
+            document.querySelector('#display').value=currentDisplay;">3</button>
+
+            <button onclick="currentDisplay+=4;
+            document.querySelector('#display').value=currentDisplay;">4</button>
+        </div>
+
+        <div class="line3">
+            <button onclick="currentDisplay+='-';
+            document.querySelector('#display').value=currentDisplay;">-</button>
+
+            <button onclick="currentDisplay+=5;
+            document.querySelector('#display').value=currentDisplay;">5</button>
+
+            <button onclick="currentDisplay+=6;
+            document.querySelector('#display').value=currentDisplay;">6</button>
+        </div>
+
+        <div class="line4">
+            <button onclick="currentDisplay+='*';
+            document.querySelector('#display').value=currentDisplay;">*</button>
+
+            <button onclick="currentDisplay+=7;
+            document.querySelector('#display').value=currentDisplay;">7</button>
+
+            <button onclick="currentDisplay+=8;
+            document.querySelector('#display').value=currentDisplay;">8</button>
+        </div>
+
+        <div class="line5">
+            <button onclick="currentDisplay+='/';
+            document.querySelector('#display').value=currentDisplay;">/</button>
+            
+            <button onclick="
+            currentDisplay=eval(currentDisplay);
+            document.querySelector('#display').value=currentDisplay;">=</button>
+
+            <button onclick="currentDisplay+=9;
+            document.querySelector('#display').value=currentDisplay;">9</button>
+        </div>
+        
+        <div class="line6">
+            <button onclick="currentDisplay+=0;
+            document.querySelector('#display').value=currentDisplay;">0</button>
+
+            <button onclick="currentDisplay+='.';
+            document.querySelector('#display').value=currentDisplay;">.</button>
+        </div>
+    </div>
+
+    <script>
+        let currentDisplay=''
+        document.querySelector('#display').value=currentDisplay;
+    </script>
+</body>
+
+</html>
